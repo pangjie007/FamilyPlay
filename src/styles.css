@@ -12,16 +12,159 @@ body {
   margin: 0;
 }
 
-.app {
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.screen-shell {
   min-height: 100vh;
   padding: 32px;
+  background: linear-gradient(135deg, #fff7e8 0%, #eaf4ff 100%);
 }
 
-.app-screen {
-  background: linear-gradient(135deg, #fff7e8, #eaf4ff);
+.hero-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto 24px;
+  padding: 28px;
+  border: 1px solid rgba(36, 31, 43, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
 }
 
-.app-controller {
+.eyebrow {
+  margin: 0 0 8px;
+  color: #6a4bc4;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.hero-panel h1,
+.controller-shell h1 {
+  margin: 0 0 8px;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.05;
+}
+
+.hero-panel p {
+  margin: 0;
+  color: #5f5a66;
+}
+
+.primary-action {
+  min-width: 136px;
+  min-height: 48px;
+  border-radius: 8px;
+  background: #ff7a3d;
+  color: white;
+  font-weight: 800;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 16px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.game-card {
+  min-height: 220px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #211d2d;
+  color: white;
+}
+
+.game-card span {
+  display: inline-flex;
+  margin-bottom: 42px;
+  color: #ffd35a;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.game-card h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.game-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.controller-shell {
+  min-height: 100vh;
+  padding: 24px;
   background: #10131d;
-  color: #fff;
+  color: white;
+}
+
+.join-form {
+  display: grid;
+  gap: 14px;
+  max-width: 420px;
+  margin-top: 24px;
+}
+
+.join-form label {
+  display: grid;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 700;
+}
+
+.join-form input {
+  min-height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 0 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.join-form button,
+.control-pad button {
+  min-height: 48px;
+  border-radius: 8px;
+  background: #4c7dff;
+  color: white;
+  font-weight: 800;
+}
+
+.control-pad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(96px, 1fr));
+  gap: 12px;
+  max-width: 520px;
+  margin-top: 24px;
+}
+
+@media (max-width: 760px) {
+  .screen-shell {
+    padding: 16px;
+  }
+
+  .hero-panel {
+    display: grid;
+    padding: 20px;
+  }
+
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .control-pad {
+    grid-template-columns: 1fr;
+  }
 }
