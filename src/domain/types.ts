@@ -21,3 +21,15 @@ export interface Room {
   players: Player[];
   currentGameId?: string;
 }
+
+export type GameSessionStatus = 'playing' | 'finished';
+
+export interface GameSession {
+  sessionId: string;
+  gameType: GameType;
+  status: GameSessionStatus;
+  startedAt: number;
+  endedAt?: number;
+  players: Player[];
+  state: Record<string, unknown>;
+}
