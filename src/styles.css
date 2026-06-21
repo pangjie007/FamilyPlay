@@ -1,0 +1,27 @@
+:root {
+  color: #241f2b;
+  background: #f7fbff;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.app-screen {
+  background: linear-gradient(135deg, #fff7e8, #eaf4ff);
+}
+
+.app-controller {
+  background: #10131d;
+  color: #fff;
+}
